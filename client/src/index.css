@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-paper text-ink font-sans;
+    background-image: radial-gradient(circle at 12% 8%, #e3f2fb 0, transparent 38%),
+      radial-gradient(circle at 88% 4%, #eaf6fd 0, transparent 32%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    @apply bg-accent/20;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-5xl px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium transition
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-dark;
+  }
+  .btn-ghost {
+    @apply btn border border-ink/15 bg-white/70 text-ink hover:border-ink/35 hover:bg-white;
+  }
+  .btn-danger {
+    @apply btn border border-red-200 bg-red-50 text-red-600 hover:bg-red-100;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-ink/15 bg-white/80 px-4 py-2.5 text-sm text-ink outline-none
+      transition placeholder:text-muted/60 focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/15;
+  }
+  .field-label {
+    @apply mb-1.5 block text-xs font-medium tracking-wide text-muted;
+  }
+  .field-error {
+    @apply mt-1 text-xs text-red-600;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink/10 bg-white/80 shadow-[0_1px_2px_rgba(27,26,24,0.04)];
+  }
+
+  .tag-pill {
+    @apply inline-flex items-center rounded-full bg-ink/5 px-2.5 py-1 text-xs text-muted;
+  }
+
+  .nav-link {
+    @apply text-sm text-muted transition hover:text-ink;
+  }
+}
+
+.markdown-body {
+  @apply text-[15px] leading-8 text-ink;
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  @apply font-serif font-semibold text-ink;
+}
+.markdown-body h1 {
+  @apply mb-4 mt-8 text-3xl;
+}
+.markdown-body h2 {
+  @apply mb-3 mt-8 pb-2 text-2xl border-b border-ink/10;
+}
+.markdown-body h3 {
+  @apply mb-2 mt-6 text-xl;
+}
+.markdown-body p {
+  @apply my-4;
+}
+.markdown-body a {
+  @apply text-accent underline-offset-2 hover:underline;
+}
+.markdown-body ul {
+  @apply my-4 list-disc space-y-1 pl-6;
+}
+.markdown-body ol {
+  @apply my-4 list-decimal space-y-1 pl-6;
+}
+.markdown-body blockquote {
+  @apply my-5 border-l-4 border-accent/40 bg-white/60 py-1 pl-5 italic text-muted;
+}
+.markdown-body code {
+  @apply rounded bg-ink/5 px-1.5 py-0.5 font-mono text-[13px] text-ink;
+}
+.markdown-body pre {
+  @apply my-5 overflow-x-auto rounded-xl bg-[#1f2a33] p-5 text-[13px] leading-6 text-[#eef4f8];
+}
+.markdown-body pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+.markdown-body img {
+  @apply my-5 max-w-full rounded-xl;
+}
+.markdown-body hr {
+  @apply my-8 border-ink/10;
+}
+.markdown-body table {
+  @apply my-5 w-full border-collapse overflow-hidden rounded-lg text-sm;
+}
+.markdown-body th,
+.markdown-body td {
+  @apply border border-ink/10 px-3 py-2 text-left;
+}
+.markdown-body th {
+  @apply bg-ink/5 font-medium;
+}

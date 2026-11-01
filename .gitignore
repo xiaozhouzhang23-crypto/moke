@@ -1,0 +1,24 @@
+# 依赖
+node_modules/
+dist/
+coverage/
+
+# 环境变量
+.env
+.env.local
+
+# 日志与缓存
+*.log
+.DS_Store
+.vite/
+*.tsbuildinfo
+
+# SQLite 数据文件
+server/data/
+*.db
+*.db-wal
+*.db-shm
+
+# 编辑器
+.idea/
+.vscode/
