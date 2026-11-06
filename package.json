@@ -1,0 +1,7 @@
+{
+  "name": "personal-blog",
+  "private": true,
+  "scripts": {
+    "build": "cd client && npm ci && npm run build"
+  }
+}
